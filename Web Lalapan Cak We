@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalapan Cakwe | Rasa Autentik Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000') center/cover; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <h1 class="text-2xl font-bold text-green-700">Lalapan<span class="text-orange-500">Cakwe</span></h1>
+        <div class="space-x-6 hidden md:block">
+            <a href="#home" class="hover:text-green-600">Home</a>
+            <a href="#menu" class="hover:text-green-600">Menu</a>
+            <a href="#lokasi" class="hover:text-green-600">Lokasi</a>
+        </div>
+        <a href="https://wa.me/your-number" class="bg-green-600 text-white px-5 py-2 rounded-full font-semibold">Pesan Sekarang</a>
+    </nav>
+
+    <header id="home" class="hero-bg h-[80vh] flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h2 class="text-5xl font-bold mb-4">Nikmatnya Lalapan, Uniknya Cakwe</h2>
+            <p class="text-xl mb-8">Perpaduan rasa tradisional dengan sentuhan modern minimalis.</p>
+            <a href="#menu" class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-md text-lg transition">Lihat Menu</a>
+        </div>
+    </header>
+
+    <section id="menu" class="py-20 max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12">Menu Andalan</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="h-48 bg-gray-200 rounded-lg mb-4"></div> <h4 class="font-bold text-xl">Paket Ayam Lalapan</h4>
+                <p class="text-gray-600 text-sm mb-4">Ayam goreng krispi dengan sambal khas dan lalapan segar.</p>
+                <span class="text-green-700 font-bold">Rp 25.000</span>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="h-48 bg-gray-200 rounded-lg mb-4"></div> <h4 class="font-bold text-xl">Cakwe Spesial</h4>
+                <p class="text-gray-600 text-sm mb-4">Cakwe hangat dengan saus cocolan rahasia.</p>
+                <span class="text-green-700 font-bold">Rp 15.000</span>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+                <div class="h-48 bg-gray-200 rounded-lg mb-4"></div>
+                <h4 class="font-bold text-xl">Lele Bakar Madu</h4>
+                <p class="text-gray-600 text-sm mb-4">Lele segar dengan bumbu madu meresap.</p>
+                <span class="text-green-700 font-bold">Rp 22.000</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8">Kunjungi Kami</h3>
+            <p class="mb-8">Temukan kami di lokasi yang strategis dan nyaman.</p>
+            <div class="rounded-xl overflow-hidden shadow-lg h-96">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.777085731766!2d114.3644265!3d-8.2251508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd14fe47f311c79%3A0xc3f835f8d9751e73!2sLalapan%20Cakwe!5e0!3m2!1sid!2sid!4v1712852000000!5m2!1sid!2sid" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 text-center">
+        <p>&copy; 2026 Lalapan Cakwe. Didesain untuk kenyamanan rasa.</p>
+    </footer>
+
+</body>
+</html>
