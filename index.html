@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tika Salon Make Up & Wedding</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -45,22 +41,30 @@
             background-position: center;
             background-attachment: fixed;
         }
+        /* Custom scrollbar for long lists */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body class="font-sans bg-cream text-dark antialiased">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav border-b border-gold/20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center gap-3 font-serif text-2xl font-bold text-gold tracking-wider">
                         <span>TIKA<span class="text-dark text-lg ml-2 font-sans font-light tracking-normal">Salon & Wedding</span></span>
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#beranda" class="text-dark hover:text-gold transition-colors duration-300 font-medium">Beranda</a>
                     <a href="#paket-makeup" class="text-dark hover:text-gold transition-colors duration-300 font-medium">Paket Make Up</a>
@@ -68,14 +72,12 @@
                     <a href="#busana" class="text-dark hover:text-gold transition-colors duration-300 font-medium">Busana</a>
                 </div>
 
-                <!-- CTA Button -->
                 <div class="hidden md:flex">
                     <a href="https://wa.me/6281336894149" target="_blank" class="bg-gold hover:bg-gold-dark text-white px-6 py-2 rounded-full transition-colors duration-300 shadow-lg shadow-gold/30">
                         <i class="fab fa-whatsapp mr-2"></i>Konsultasi
                     </a>
                 </div>
 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -84,7 +86,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-gold/20">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#beranda" class="block px-3 py-2 text-dark hover:text-gold font-medium">Beranda</a>
@@ -96,7 +97,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="beranda" class="hero-bg h-screen flex items-center justify-center text-center px-4">
         <div class="max-w-3xl">
             <h2 class="text-gold font-sans tracking-widest uppercase text-sm md:text-base mb-4 font-semibold">Pancarkan Pesona Terindahmu</h2>
@@ -112,69 +112,176 @@
         </div>
     </section>
 
-    <!-- Paket Make Up Section -->
     <section id="paket-makeup" class="py-20 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">Pilihan Paket Make Up</h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">Pilihan Paket</h2>
                 <div class="w-24 h-1 bg-gold mx-auto mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Kami menyediakan berbagai pilihan paket make up yang disesuaikan dengan kebutuhan acara spesial Anda, dirias langsung oleh MUA profesional.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami menyediakan berbagai pilihan paket yang disesuaikan dengan kebutuhan acara spesial Anda, dirias langsung oleh MUA profesional.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Paket 1 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
-                    <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
-                    <div class="p-8 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Akad / Intimate</h3>
-                        <p class="text-gold font-bold text-3xl mb-6">Mulai Rp 2.5 Jt</p>
-                        <ul class="text-gray-600 space-y-3 mb-8 text-left">
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Make Up Akad Nikah</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Hairdo / Hijab Styling</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Softlens & Bulu Mata</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Ronce Melati Asli (Standar)</li>
-                        </ul>
-                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Akad" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
-                    </div>
-                </div>
-
-                <!-- Paket 2 (Highlight) -->
-                <div class="bg-dark rounded-xl shadow-2xl overflow-hidden transform md:-translate-y-4 relative">
+                <!-- Paket 1: Amarta (15 Jt) - NOW BEST SELLER -->
+                <div class="bg-dark rounded-xl shadow-2xl overflow-hidden relative z-10 md:transform md:scale-105">
                     <div class="absolute top-0 right-0 bg-gold text-white text-xs font-bold px-3 py-1 rounded-bl-lg">BEST SELLER</div>
                     <div class="p-8 text-center text-white">
-                        <h3 class="font-serif text-2xl font-bold text-gold mb-2">Paket Resepsi</h3>
-                        <p class="text-white font-bold text-3xl mb-6">Mulai Rp 4.5 Jt</p>
-                        <ul class="text-gray-300 space-y-3 mb-8 text-left">
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Make Up Akad + Resepsi</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Retouch Make Up</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Hairdo / Hijab (2x Ganti)</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Melati & Aksesoris Premium</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Free Make Up 2 Ibu</li>
-                        </ul>
-                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Resepsi" class="block w-full bg-gold hover:bg-gold-light text-dark font-bold py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                        <h3 class="font-serif text-2xl font-bold text-gold mb-2">Paket Amarta (Abadi)</h3>
+                        <p class="text-white font-bold text-3xl mb-6">Rp 15 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-300 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi pelaminan 6 meter</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Pintu masuk dengan lorong 3 meter dengan bunga segar</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Kaca wedding dengan nama pengantin</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Kursi meja akad</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Master Ceremony (Dalang)</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Cucuk Lampah</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Hena + kuku palsu</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Bouquet bunga segar</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-white flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 3 kali (1 Akad & 2 Resepsi)</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Bapak pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Ibu pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Domas cowok</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Domas cewek</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 8 terima tamu</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Amarta" class="block w-full bg-gold hover:bg-gold-light text-dark font-bold py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
                     </div>
                 </div>
 
-                <!-- Paket 3 -->
+                <!-- Paket 2: Kencana (9 Jt) -->
                 <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
                     <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
                     <div class="p-8 text-center">
-                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Sultan (All In)</h3>
-                        <p class="text-gold font-bold text-3xl mb-6">Hubungi Kami</p>
-                        <ul class="text-gray-600 space-y-3 mb-8 text-left">
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Full Make Up (Akad + Resepsi)</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Make Up Prewedding</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Peminjaman 3 Gaun/Kebaya</li>
-                            <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Free Make Up Keluarga (4 Orang)</li>
-                        </ul>
-                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20ingin%20tanya%20detail%20Paket%20Sultan" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Kencana (Emas)</h3>
+                        <p class="text-gold font-bold text-3xl mb-6">Rp 9 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi pelaminan 6 meter</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Pintu masuk</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Kursi meja akad</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Master Ceremony (Dalang)</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Cucuk Lampah</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Hena</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Bouquet bunga palsu</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-dark flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 3 kali (1 Akad & 2 Resepsi)</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Bapak pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Ibu pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Domas cowok</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Domas cewek</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 6 terima tamu</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Kencana" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Paket 3: Aruna (8 Jt) -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
+                    <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
+                    <div class="p-8 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Aruna (Fajar)</h3>
+                        <p class="text-gold font-bold text-3xl mb-6">Rp 8 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi pelaminan 6 meter</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Pintu masuk</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box Amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Master Ceremony (Dalang)</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Prosesi acara ngunduh mantu</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Cucuk Lampah</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Kuku Palsu</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-dark flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 3 kali (3 Resepsi)</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Bapak pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 Ibu pengantin & Besan</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 6 terima tamu</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Aruna" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Paket 4: Kirana (6 Jt) -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
+                    <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
+                    <div class="p-8 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Kirana (Cahaya)</h3>
+                        <p class="text-gold font-bold text-3xl mb-6">Rp 6 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi pelaminan 6 meter</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Pintu masuk</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Bouquet bunga artificial</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-dark flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 3 kali (3 Resepsi)</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 1 Bapak pengantin</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 1 Ibu pengantin</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 terima tamu</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Kirana" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Paket 5: Puspa (5 Jt) - NOW REGULAR -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
+                    <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
+                    <div class="p-8 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Puspa (Bunga)</h3>
+                        <p class="text-gold font-bold text-3xl mb-6">Rp 5 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi pelaminan 4 meter</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Pintu masuk</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Bouquet bunga artificial</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-dark flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 3 kali (1 Akad & 2 Resepsi)</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 1 Bapak pengantin</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 1 Ibu pengantin</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> 2 terima tamu</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Puspa" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Paket 6: Melati (3.5 Jt) -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative group">
+                    <div class="h-2 bg-gold w-0 group-hover:w-full transition-all duration-500 absolute top-0 left-0"></div>
+                    <div class="p-8 text-center">
+                        <h3 class="font-serif text-2xl font-bold text-dark mb-2">Paket Melati (Suci)</h3>
+                        <p class="text-gold font-bold text-3xl mb-6">Rp 3.5 Jt</p>
+                        <div class="h-64 overflow-y-auto mb-8 pr-2 custom-scrollbar text-left">
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Dekorasi Indoor</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Box amplop</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Soflen</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Hena</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Kuku Palsu</li>
+                                <li class="flex items-start"><i class="fas fa-check text-gold mt-1 mr-3 text-xs"></i> Bouquet bunga artificial</li>
+                                <li class="pt-2 border-t border-gold/10 font-semibold text-dark flex items-start">Rias Pengantin:</li>
+                                <li class="flex items-start ml-4"><i class="fas fa-minus text-gold mt-1 mr-3 text-[10px]"></i> Ganti 2kali ( 1 Akad & 1 Resepsi )</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281336894149?text=Halo%20Tika%20Salon,%20saya%20tertarik%20dengan%20Paket%20Melati" class="block w-full border border-gold text-gold hover:bg-gold hover:text-white py-3 rounded-full transition-colors duration-300">Pilih Paket</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dekorasi Section -->
     <section id="dekorasi" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -184,7 +291,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Dekorasi Lamaran -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dekorasi Lamaran" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
@@ -194,7 +300,6 @@
                     </div>
                 </div>
 
-                <!-- Dekorasi Pernikahan -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dekorasi Pelaminan" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
@@ -207,7 +312,6 @@
         </div>
     </section>
 
-    <!-- Busana Section -->
     <section id="busana" class="py-20 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -217,28 +321,24 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Busana 1 -->
                 <div class="relative group overflow-hidden rounded-lg">
                     <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kebaya Tradisional" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <h4 class="text-white font-serif text-xl border-b border-gold pb-1">Kebaya Adat</h4>
                     </div>
                 </div>
-                <!-- Busana 2 -->
                 <div class="relative group overflow-hidden rounded-lg">
                     <img src="https://images.unsplash.com/photo-1546193430-c2d207739ed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gaun Modern" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <h4 class="text-white font-serif text-xl border-b border-gold pb-1">Gaun Internasional</h4>
                     </div>
                 </div>
-                <!-- Busana 3 -->
                 <div class="relative group overflow-hidden rounded-lg">
                     <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Busana Pria" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <h4 class="text-white font-serif text-xl border-b border-gold pb-1">Jas Beskap Pria</h4>
                     </div>
                 </div>
-                <!-- Busana 4 -->
                 <div class="relative group overflow-hidden rounded-lg">
                     <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hijab Modern" class="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -255,11 +355,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-gold">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <!-- Brand -->
                 <div>
                     <div class="flex items-center gap-4 mb-4">
                         <img src="https://drive.google.com/uc?export=view&id=1CItqYmNs_Wxig4OrWh6HWOhMDbjo8mf-" alt="Logo Tika Salon" class="h-24 md:h-28 w-auto object-contain rounded-md bg-white p-2">
@@ -273,7 +371,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h3 class="font-serif text-xl font-bold mb-4">Tautan Cepat</h3>
                     <ul class="space-y-2 text-gray-400">
@@ -285,7 +382,6 @@
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div>
                     <h3 class="font-serif text-xl font-bold mb-4">Hubungi Kami</h3>
                     <ul class="space-y-4 text-gray-400">
@@ -310,12 +406,10 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281336894149" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Simple JS for Mobile Menu Toggle -->
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
